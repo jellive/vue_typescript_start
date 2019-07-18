@@ -2,17 +2,12 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
-    <!-- <message/> -->
-    <!-- <children :parentMessage="message"/> -->
-    <children @counter="counter"/>
-      <p>
-        부모에서 숫자를 보여줍니다. : {{count}}
-      </p>
+    <children/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Provide } from 'vue-property-decorator';
 import children from '@/components/children.vue'
 
 @Component({ // decorator. just function.
@@ -21,10 +16,7 @@ import children from '@/components/children.vue'
   },
 })
 export default class Home extends Vue {
-  count: number = 0
+  @Provide('message') msg: string = 'provide/inject example'
 
-  counter() {
-    this.count++
-  }
 }
 </script>
