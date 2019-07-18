@@ -4,6 +4,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
     <!-- <message/> -->
     <children :parentMessage="message"/>
+    <button @click="changeMessage">메세지를 바꿔줄께요.</button>
   </div>
 </template>
 
@@ -22,5 +23,9 @@ import children from '@/components/children.vue'
 })
 export default class Home extends Vue {
   public message: string = 'hello world'
+
+  changeMessage() {
+    this.message = 'change'
+  }
 }
 </script>
