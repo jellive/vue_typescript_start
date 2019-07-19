@@ -1,14 +1,15 @@
 <template>
     <div>
-        {{$store.getters.count}}
+        {{count}}
     </div>
 </template>
 
 <script lang="ts">
 import {Vue, Component} from 'vue-property-decorator'
-import count from '@/components/count.vue'
+import {Getter, State} from 'vuex-class'
 
 export default class Count extends Vue {
-
+    // @Getter readonly count!: number // Getter, State 둘다 접근 가능.
+    @State readonly count!: number
 }
 </script>

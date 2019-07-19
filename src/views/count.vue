@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import {Vue, Component} from 'vue-property-decorator'
+import {Action, Mutation} from 'vuex-class'
 import count from '@/components/count.vue'
 @Component({
     components: {
@@ -15,12 +16,16 @@ import count from '@/components/count.vue'
     }
 })
 export default class Count extends Vue {
-    increase() {
-        this.$store.dispatch('increase')
-    }
-    decrease() {
-        this.$store.dispatch('decrease')
-    }
+    @Action readonly increase // 따로 안넣고 이름만 지정해도 됨.
+    // increase() {
+    //     this.$store.dispatch('increase')
+    // }
+    @Action readonly decrease
+    // decrease() {
+    //     this.$store.dispatch('decrease')
+    // }
+
+    @Mutation readonly setCount
 }
 </script>
 
