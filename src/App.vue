@@ -9,7 +9,8 @@
       <router-link to="/inject">Inject</router-link> |
       <router-link to="/model">Model</router-link> |
       <router-link to="/mixins">Mixins</router-link> |
-      <router-link to="/count">Count(Vuex)</router-link>
+      <router-link to="/count">Count(Vuex)</router-link> |
+      <router-link to="/module">Module(Vuex Store)</router-link>
     </div>
     <router-view/>
   </div>

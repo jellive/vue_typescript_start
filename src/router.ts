@@ -9,6 +9,7 @@ import Message from './views/message.vue'
 import Model from './views/parent_model.vue'
 import Mixins from './views/mixins.vue'
 import Count from './views/count.vue'
+import Module from './components/module.vue'
 
 Vue.use(Router);
 
@@ -68,6 +69,11 @@ export default new Router({
       path: '/count',
       name: 'count',
       component: Count
+    },
+    {
+      path: '/module',
+      name: 'module',
+      component: Module
     }
   ],
 });
