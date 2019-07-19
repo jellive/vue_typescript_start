@@ -2,7 +2,14 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/prop">Prop</router-link> | 
+      <router-link to="/watch">Watch</router-link> | 
+      <router-link to="/emit">Emit</router-link> |
+      <router-link to="/inject">Inject</router-link> |
+      <router-link to="/model">Model</router-link> |
+      <router-link to="/mixins">Mixins</router-link> |
+      <router-link to="/count">Count(Vuex)</router-link>
     </div>
     <router-view/>
   </div>

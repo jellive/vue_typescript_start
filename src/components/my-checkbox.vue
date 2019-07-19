@@ -13,7 +13,7 @@ export default class MyCheckbox extends Vue {
 
     @Emit() // Emit이 Model변경보다 먼저 된다.
     public change(event: Event) {
-        return event.target.checked
+        return event.target!.checked
     }
 }
 </script>
